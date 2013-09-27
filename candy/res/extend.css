@@ -1,0 +1,8 @@
+
+#chat-sound-control {
+	/* such an annoyance, and flash even */
+	display: none !important;
+}
+form.message-form input{
+	color: black;
+}
