@@ -18,8 +18,17 @@ function makelink(){
 	}else{
 		link += "&anon=no";
 	}
-	link = (window.location.href).replace('create.html', 'index.html') + link;
 	
+        //link = (window.location.href).replace('create.html', 'index.html') + link;
+        var base_url = (window.location.href).replace('create.html', 'index.html');
+        if(base_url.indexOf('?')>=0){
+           base_url = base_url.split('?')[0];
+        }	
+        if(base_url.indexOf('#')>=0){
+           base_url = base_url.split('#')[0];
+        }
+        link = base_url + link;
+
 	var encpass = removeWhitespace(byId('xmpp_enc_pass').value);
 	if(encpass.length>0){
 		link += '#'+encpass;
