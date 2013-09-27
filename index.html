@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Chat</title>
+	<!--<link rel="shortcut icon" href="./candy/res/img/favicon.png" type="image/gif">-->
+	<link rel="stylesheet" type="text/css" href="./candy/res/default.css">
+	<link rel="stylesheet" type="text/css" href="./candy/res/extend.css">
+	<link rel="stylesheet" type="text/css" href="./css/default.css">
+	<script type="text/javascript" src="https://crypto.stanford.edu/sjcl/sjcl.js"></script>
+	<!--<script type="text/javascript" src="./candy/plugins/sjcl/sjcl.js"></script>-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="./js/jquery.min.js"></script>-->
+	<!-- this chat uses https://github.com/candy-chat/candy/releases/ the youngest release of candy -->
+	<script type="text/javascript" src="./candy/libs/libs.min.js"></script>
+	<script type="text/javascript" src="./candy/candy.min.js"></script>
+	<script type="text/javascript" src="./candy/plugins/candy.extend.js"></script>
+	<script type="text/javascript" src="./candy/plugins/candy.nodelay.js"></script>
+	<script type="text/javascript" src="./js/chat.js"></script>
+</head>
+<body>
+	<div id="xmpp_webclient_login_form" class="xmpp webclient login">
+		<button class="xmpp webclient login optional" id="xmpp_webclient_login_hide_optional">Select Server from List</button>
+		<label class="xmpp webclient login" id="xmpp_webclient_login_servers_label" for="xmpp_webclient_login_servers">Select Server from List:</label> 
+		<select class="xmpp webclient login" id="xmpp_webclient_login_servers">
+		</select>
+		<button class="xmpp webclient login" id="xmpp_webclient_enter_serverdetails">... or choose one yourself</button>
+		<label class="xmpp webclient login optional" for="xmpp_webclient_login_optional_host">Host (example: jappix.com):</label>
+		<input class="xmpp webclient login optional" id="xmpp_webclient_login_optional_host">
+		<label class="xmpp webclient login optional" for="xmpp_webclient_login_optional_http">HTTP-Bind (example: https://bind.jappix.com/):</label>
+		<input class="xmpp webclient login optional" id="xmpp_webclient_login_optional_http">
+		<label class="xmpp webclient login optional" for="xmpp_webclient_login_optional_muc">MUC (example: muc.jappix.com, often conference. or muc. followed by host):</label>
+		<input class="xmpp webclient login optional"  id="xmpp_webclient_login_optional_muc">
+		<label class="xmpp webclient login" for="xmpp_webclient_login_jid">JID (Username):</label>
+		<input class="xmpp webclient login" type="text" id="xmpp_webclient_login_jid">
+		<label class="xmpp webclient login" for="xmpp_webclient_login_pass">Password:</label>
+		<input class="xmpp webclient login" type="password" id="xmpp_webclient_login_pass">
+		<label class="xmpp webclient login" id="xmpp_webclient_login_languages_label" for="xmpp_webclient_login_languages">Language:</label>
+		<select class="xmpp webclient login" id="xmpp_webclient_login_languages">
+		</select>
+		<label class="xmpp webclient login" for="xmpp_webclient_login_rooms">Rooms to join (seperate by comma, example: room1, room2):</label>
+		<input class="xmpp webclient login" id="xmpp_webclient_login_rooms" value="">
+		<button class="xmpp webclient login" id="xmpp_webclient_login_button">Connect</button>
+		<p class="xmpp webclient login notice">
+			This page uses <a href="http://candy-chat.github.io/candy" target="_blank">Candy Chat</a>
+			for multi user XMPP chat. Only the tiny plugins are own work, Candy is 
+			<span class="xmpp webclient strikethrough">stolen</span> ... just used.
+		</p>
+		<p class="xmpp webclient login notice">
+			Read <a href="./create.html" target="_blank">here</a> if you
+			want to <a href="./create.html" target="_blank">create your 
+			own chatroom and a link for users to autojoin it</a>.
+		</p>
+		<p class="xmpp webclient login notice">
+			<span style="display: block;" class="xmpp webclient login notice">
+			Please note: <strong class="xmpp webclient">Encryption passwords</strong> are 
+			just appended to the link (if you use one, not mandatory). So if you want to specify an encryption password for
+			your chats, just append a "#passwordhere" to the link, where "passwordhere" is 
+			your password.
+			</span>
+			<span style="display: block;" class="xmpp webclient login notice">
+			ALL messages in this window, group and private, will be encrypted and decrypted using this 
+			password. Of course, all participants will have to use the same password. You could
+			for example give your contacts a link which already has a password appended.
+			If you create a <a href="./create.html#create" target="_blank">direct link</a> for a 
+			room, please specify the encryption password if you use one.
+			</span>
+			<span style="display: block;" class="xmpp webclient login notice">
+			Using an encryption password is not mandatory, but can sometimes increase security.
+			</span>
+		</p>
+	</div>
+	<div id="candy"></div>
+</body>
+</html>
