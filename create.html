@@ -2,50 +2,83 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
 	<title>Create XMPP Chat</title>
 	<link rel="stylesheet" type="text/css" href="./css/default.css">
 	<script src="./js/create.js"></script>
 </head>
 <body>
 	<div class="xmpp webclient">
+                <p class="xmpp webclient" style="font-size: 85%">
+                        Of course, you need a XMPP account yourself before
+                        you can create a XMPP multiuser chatroom. <br>
+                        If you do not yet have one, you might like to look
+                        at <a href="http://www.jaim.at/server/server_by_gateway_xmpp.html" target="_blank">jaim.at</a>
+                        which provides a pretty long server list.<br>
+                        A server should feature MUC and (HTTP-)Proxy.
+                </p>
 		<p class="xmpp webclient">
-			To create a XMPP-Chatroom (MUC, Multi User Chat), log in with you XMPP-Account and
-			join a room that has not already been registred. You will see
-			a room has not yet been registered if you are moderator on
-			joining it. This usually is indicated by some kind of icon or
+			To create a XMPP-Chatroom (MUC, Multi User Chat), 
+                        log in with you XMPP-Account and
+			join a room that has not already been registered. 
+                        You will see
+			a room has not yet been registered if you are 
+                        moderator on
+			joining it. This usually is indicated by some 
+                        kind of icon or
 			text in your client, for example a flag in Pidgin.
 		</p>
 		<p class="xmpp webclient">
-			If using Pidgin or Adium, creating a room works like this:
+			If using Pidgin or Adium, creating a 
+                        room works like this:
 			<a href="https://itservices.stanford.edu/service/instantmessaging/pidgin/chat"
-			target="_blank">Click me (some tutorial with screenshots)</a>.
-			Note that you do not *have* to invite contacts. You can invite
-			them via XMPP or just tell them of the room and ask them to join it.
+			target="_blank">Click me (stutorial with screenshots)</a>.
+			Note that you do not have to invite contacts like
+                        the tutorial describes. You can invite
+			them via XMPP or just tell them of the room and 
+                        ask them to join it.
 		</p>
 		<p class="xmpp webclient">
 			To make the room persistent, you need to configure it.
-			Many XMPP clients have graphical tools to do so. In Pidgin, just join
+			Many XMPP clients have graphical tools 
+                        to do so. In Pidgin, just join
 			the room and type "/config". A window will popup and allow you to 
 			configure the room. <br>
-			Most likely you will want your room to be persistent, not publically
-			searchable (if it is a smaller/ private chat) and the participant list
-			not public. You can assign a password to the room so users will be asked
+			If you have a smaller, private or community related 
+                        chatroom, you will most likely want your room to 
+                        be persistent, not publically
+			searchable and the participant list
+			not public. 
+                        You can assign a password to the room so 
+                        users will be asked
 			the password before being able to join. <br>
-			XMPP servers usually log chat history for persistent rooms. This is pretty
-			annoying, and sometimes they offer an option to configure room history.
-			If you see such an option in room configuration, you most likely want to
-			set the number of retrieved messages to 0.<br>
-			If you cannot set message history to none, clear it pretty often by joining
-			as an admin and clearing the room messages. In Pidgin, this is a simple 
+			XMPP servers usually log chat history for 
+                        persistent rooms. Depending on how much history
+                        the server stores by default, you'll have to deal 
+                        with users reading everything that has been written
+                        during the last days when joining, or it may even be
+                        so much text joining gets pretty slow.<br>
+                        So if there is an option to set the message history
+                        to none (to 0 messages, 0 chars, 0 seconds or such)
+                        you most likely want to set discussion history to
+                        none.<br>
+			If you cannot set message history to none, 
+                        clear it pretty often by joining
+			as an admin and clearing the room messages. 
+                        In Pidgin, this is a simple 
 			"/clear" and the messages are gone.
 		</p>
 		<p class="xmpp webclient">
-			If you want users to be able to join the room by just clicking a link, you
-			might fill out the form below and create a join-link that will allow everyone
+			If you want users to be able to join the 
+                        room by just clicking a link, you
+			might fill out the form below and 
+                        create a join-link that will allow everyone
 			to join your room.
 			<br>
-			When you allow non-registered users to connect, please only specify registered
-			rooms for joining: They cannot join non-persistent rooms on most servers.
+			When you allow non-registered users 
+                        to connect, please only specify registered
+			rooms for joining: They cannot join non-persistent 
+                        rooms on most servers.
 		</p>
 		<ul class="xmpp webclient" id="create">
 			<li><label class="xmpp webclient" for="xmpp_lang">Language:</label></li>
@@ -70,8 +103,10 @@
 			
 			<li><label class="xmpp webclient" for="xmpp_isanon">Allow non-registered users to chat ("1", "true" or "yes", everything else no):</label>
 			<p style="font-size: 85%;">
-				If you allow non-registered users to connect, please only specify registered
-				rooms for joining: They cannot join non-persistent rooms on most servers.
+				If you allow non-registered users to 
+                                connect, please only specify registered
+				rooms for joining: They cannot 
+                                join non-persistent rooms on most servers.
 			</p>
 			</li>
 			<li><input type="text" class="xmpp webclient" id="xmpp_isanon"></li>
@@ -84,13 +119,20 @@
 			
 			<li><label class="xmpp webclient" for="xmpp_enc_pass">Encryption password (all messages in the window will be encrypted using this password):</label>
 			<p style="font-size: 85%;">
-				If you specify an encryption password, all messages in the window opened using the
-				link will be automatically encrypted using the password.<br>
-				As the password is part of the link you'll receive below, all messages (groupchat and
-				private chats) will only be readable for those who have the link.<br>
-				This has advantages concerning security, but disadvantages concerning compatibility
-				(users with other clients will not be able to join). So only use this if you really need it.
-				To use no password, just leave the field below empty.
+				If you specify an encryption password, 
+                                all messages in the window opened using the
+				link will be automatically encrypted using the 
+                                password.<br>
+				As the password is part of the link 
+                                you'll receive below, all messages (groupchat and
+				private chats) will only be readable 
+                                for those who have the link.<br>
+				This has advantages concerning security, 
+                                but disadvantages concerning compatibility
+				(users with other clients will not be 
+                                able to join). So only use this if you really need it.
+				To use no password, 
+                                just leave the field below empty.
 			</p>
 			</li>
 			
