@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lang>
+	<divlogin>
+		<button class="xmpp webclient login optional" id="xmpp_webclient_login_hide_optional">Server aus Liste auswählen</button>
+		<label class="xmpp webclient login" id="xmpp_webclient_login_servers_label" for="xmpp_webclient_login_servers">Server aus Liste auswählen:</label> 
+		<select class="xmpp webclient login" id="xmpp_webclient_login_servers">
+		</select>
+		<button class="xmpp webclient login" id="xmpp_webclient_enter_serverdetails">... oder Server-Details selbst eingeben</button>
+		<label class="xmpp webclient login optional" for="xmpp_webclient_login_optional_host">Host (z.B. jappix.com):</label>
+		<input class="xmpp webclient login optional" id="xmpp_webclient_login_optional_host"></input>
+		<label class="xmpp webclient login optional" for="xmpp_webclient_login_optional_http">HTTP-Bind (z.B. https://bind.jappix.com/):</label>
+		<input class="xmpp webclient login optional" id="xmpp_webclient_login_optional_http"></input>
+		<label class="xmpp webclient login optional" for="xmpp_webclient_login_optional_muc">MUC (z.B. muc.jappix.com, oft conference. oder muc. und dann der Host):</label>
+		<input class="xmpp webclient login optional"  id="xmpp_webclient_login_optional_muc"></input>
+		<label class="xmpp webclient login" for="xmpp_webclient_login_jid">JID (Username):</label>
+		<input class="xmpp webclient login" type="text" id="xmpp_webclient_login_jid"></input>
+		<label class="xmpp webclient login" for="xmpp_webclient_login_pass">Passwort:</label>
+		<input class="xmpp webclient login" type="password" id="xmpp_webclient_login_pass"></input>
+		<label class="xmpp webclient login" id="xmpp_webclient_login_languages_label" for="xmpp_webclient_login_languages">Sprache:</label>
+		<select class="xmpp webclient login" id="xmpp_webclient_login_languages">
+		</select>
+		<label class="xmpp webclient login" for="xmpp_webclient_login_rooms">Räume (mehrere mit Komma trennen, z.B. raum1, raum2, raum3):</label>
+		<input class="xmpp webclient login" id="xmpp_webclient_login_rooms" value=""></input>
+		<button class="xmpp webclient login" id="xmpp_webclient_login_button">Verbinden</button>
+		<p class="xmpp webclient login notice">
+			Diese Seite nutzt <a href="http://candy-chat.github.io/candy" target="_blank">Candy Chat</a>
+			für Gruppenchats über XMPP.  Nur die (kleinen) Plugins sind eigene Arbeit, Candy 
+			<span class="xmpp webclient strikethrough">ist geklaut</span> wird nur verwendet ;).
+		</p>
+		<p class="xmpp webclient login notice">
+			Lies <a href="./create.html" target="_blank">hier</a> weiter, wenn
+			Du <a href="./create.html" target="_blank">einen eigenen
+			XMPP-Chatraum erstellen und Usern einen Link zum automatischen Betreten geben willst</a>.
+		</p>
+		<p class="xmpp webclient login notice">
+			<span style="display: block;" class="xmpp webclient login notice">
+			Bitte beachte: <strong class="xmpp webclient">Verschlüsselungspasswörter</strong>
+			werden einfach nach einem "#" an den Link angehängt. Ist z.B. http://chat.meinanbieter.com/index.html?lang=de
+			der Link, so lässt sich mit http://chat.meinanbieter.com/index.html?lang=de#passwort das 
+			Passwort angeben. Natürlich sollte das Passwort nicht "passwort", sondern schwer zu
+			erraten sein (aber keine Sonder- und Leerzeichen bitte).
+			</span>
+			<span style="display: block;" class="xmpp webclient login notice">
+			ALLE Nachrichten in diesem Fenster werden mit dem angegebenen Passwort verschlüsselt.
+			Das betrifft sowohl Gruppen- als auch Privatchats. Damit kann die Nachrichten, die in
+			diesem Fenster geschrieben werden, nur lesen, wer den Link (mit Passwort) hat. Erstellst Du
+			einen <a href="./create.html#create" target="_blank">Direktlink zu einem Raum</a>, kannst
+			Du das Verschlüsselungspasswort angeben, falls Du eines verwendest.
+			</span>
+			<span style="display: block;" class="xmpp webclient login notice">
+			Ein Verschlüsselungspasswort ist nicht notwendig, aber kann die Sicherheit eines Raumes 
+			erhöhen. Der Nachteil: User können den Raum nicht mit anderen Clients nutzen, bzw. sehen
+			dann nur verschlüsselte Zeichenkettten statt Nachrichten. 
+			</span>
+		</p>
+	</divlogin>
+</lang>
